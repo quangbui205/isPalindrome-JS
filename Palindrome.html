@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    main()
+    function main()
+    {
+        let string = prompt("Nhap vao Chuoi muon kiem tra: ");
+        document.write("Chuoi vua nhap vao la: " +string + "<br>")
+        if (isPalindrome(string))
+        {
+            document.write("Chuoi vua nhap la 1 Chuoi Doi Xung!!")
+        }
+        else
+        {
+            document.write("Chuoi vua nhap Khong phai la 1 Chuoi Doi Xung!!");
+        }
+    }
+    function isPalindrome(str)
+    {
+        if (str.length<2) return false;
+        for (i=0;i<str.length/2;i++)
+        {
+            if (str[i] != str[str.length - 1 -i])
+                return false;
+        }
+        return true;
+
+    }
+</script>
+</body>
+</html>
